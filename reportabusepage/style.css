@@ -11,7 +11,7 @@ html, body, #map-canvas {
 	width: 900px;
 }
 .rescue-header{
-	color:#4CAF50;
+	color:red;
 	width: 100%;
 	display: flex;
 	margin-top: 100px;
@@ -47,7 +47,7 @@ input {
 }
 
 #savelocation{
-	background-color: #4CAF50; /* Green */
+	background-color: red; /* Green */
 	border-radius: 20px;
   border: none;
   color: white;
@@ -65,7 +65,7 @@ input {
 }
 
 #uploadimages{
-	background-color: #4CAF50; /* Green */
+	background-color: red; /* Green */
 	border-radius: 20px;
   border: none;
   color: white;

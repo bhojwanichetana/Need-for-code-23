@@ -51,7 +51,7 @@ function bindDataLayerListeners(dataLayer) {
 
 function saveMarker() {
     map.data.toGeoJson(function (json) {
-        localStorage.setItem('needshelterdata', JSON.stringify(json));
+        localStorage.setItem('abusedata', JSON.stringify(json));
     });
 }
 
@@ -63,7 +63,7 @@ function clearMarkers() {
 }
 
 function loadMarkers(map) {
-    var data = JSON.parse(localStorage.getItem('needshelterdata'));
+    var data = JSON.parse(localStorage.getItem('abusedata'));
     map.data.addGeoJson(data);
 }
 
