@@ -1,145 +1,224 @@
-body {
-    font-family: "Montserrat";
-    text-align: center;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "ubuntu";
-  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background:#1FD6A5;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #1FD6A5;
+}
+
+.heading span {
+  color: #30076a;
+}
+
+.btn {
+  display: block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #30076a;
+  cursor: pointer;
+  background: none;
+  color: #30076a
+  ;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
   
-  p {
-    color: #8f8f8f;
-  }
   
-  /* Heading Section */
-  .heading-main {
-    padding-top: 7%;
-    font-family: "Montserrat-black", sans-serif;
-    font-weight: 900;
+}
+#login-btn{
+  font-size: 14px;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #1D7874;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+.readmore{
+  width: 200px;
+  text-align: center;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header {
+    background: #fff;
+    display:-webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem 9%;
+    -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    -webkit-transform: translateX(0rem);
+            transform: translatey(0rem);
+           
+  }
+  .header.active {
+    -webkit-transform: translateX(0rem);
+            transform: translateY(0rem);
+  }
+  .header .logo {
     font-size: 2.5rem;
-    line-height: 1.5;
-    padding-bottom: 3%;
-  }
-  .heading-main:hover {
-    color: #007bff;
-  }
-  .heading-large {
-    font-family: "Montserrat-black", sans-serif;
-    font-weight: 900;
-    font-size: 2.5rem;
-    line-height: 1.5;
+    color: #16001E;
+    font-weight: bolder;
   }
   
-  .section-heading {
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: bold;
-    font-family: "Ubuntu";
+  .header .logo i {
+    color: #1FD6A5;
   }
   
-  .container-fluid {
-    padding: 7% 15%;
+  .header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: #1D7874;
   }
   
-  /* Sections */
-  .colored-section {
-    background-color: #ca3549;
-    color: #fff;
-  }
-  .white-section {
-    /* background-color: #fff ; */
-    background-color: #f9faff;
-  }
-  
-  /* Donate Buttons */
-  .donate-button {
-    margin: 3% 5% 3% 0;
-  }
-  .donate-button:hover {
-    background-color: red;
-  }
-  
-  /* Modal */
-  .modal-body {
-    padding: 50px;
-    background-color: #f9faff;
-  }
-  
-  .container-fluid {
-    padding: 3% 15% 22%;
-    text-align: left;
-    background-image: url("../images/images1.jfif");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* History Section */
-  #historys {
-    position: relative;
-  }
-  
-  /* details Section */
-  #details {
-    padding: 100px;
-  }
-  .detail-heading {
-    color: #C490E4;
-  }
-  .detail-text {
-    font-size: 2rem;
-    line-height: 1.5;
-    font-weight: bold;
-  }
-  
-  .detail-column {
-    padding: 3% 2%;
-  }
-  
-  /* jobs Section */
-  #job {
-    padding: 100px;
-  }
-  
-  .job-text {
-    font-size: 2.6rem;
-    color: #ffaaa7;
-    line-height: 1.5;
-    font-weight: bold;
-  }
-  
-  .job-column {
-    padding: 3% 2%;
-  }
-  
-  .social-icon {
-    margin: 20px 10px;
-  }
-  
-  @media (max-width: 1028px) {
-    #title {
-      text-align: center;
-    }
-  }
-  
-  /*footer*/
-  .foot {
-    background-color: #100d44;
-    color: white;
-    bottom: 0%;
-  }
-  
-  .container-foot {
-    padding: 1, 2;
-  }
-  .container-fluid{
+  .header .navbar a:hover {
+    color: #1aa7ac;
     
-    height: auto;
   }
-  .container-fluid1{
-    background-image: url("../images/donation-images/golden\ pet.jpg");
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  }
+  .navbar li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  
+  .header .icons a,
+  .header .icons div {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    color: #16001E;
+    cursor: pointer;
+  }
+  
+  .header .icons a:hover,
+  .header .icons div:hover {
+    color: #1aa7ac;
+    transform: scale(1.1);
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+    height: 300px;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #1D7874;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+ .btn:hover {
+    background-color: black;
+  }
+
+  .home{
+    display: flex;
+    margin-top: 150px;
   }
