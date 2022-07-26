@@ -72,7 +72,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #55aafe;
+  background: #1D7874;
   z-index: -1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -110,7 +110,7 @@ section {
 }
 
 .header {
-    background: white;
+    background: #fff;
     display:-webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -138,18 +138,18 @@ section {
   }
   .header .logo {
     font-size: 2.5rem;
-    color: #130f40;
+    color: #16001E;
     font-weight: bolder;
   }
   
   .header .logo i {
-    color: #1aa7ac;
+    color: #1FD6A5;
   }
   
   .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: rgb(195, 31, 31);
+    color: #1D7874;
   }
   
   .header .navbar a:hover {
@@ -170,7 +170,7 @@ section {
   .header .icons div {
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color: #130f40;
+    color: #16001E;
     cursor: pointer;
   }
   
@@ -181,7 +181,9 @@ section {
   }
 
 
-
+body{
+  background-color: #ffffff;
+}
 .home {
   min-height: 100vh;
   display: -webkit-box;
@@ -211,7 +213,7 @@ section {
 }
 
 .home .content h3 span {
-  color: #130f40;
+  color: #1fd6a5;
 }
 
 .home .content .btn {
@@ -224,7 +226,7 @@ section {
 }
 
 .home .content .btn::before { 
-  background:  #130f40 ;
+  background:  #1D7874 ;
 }
 
 .home .wave {
@@ -270,7 +272,7 @@ section {
 }
 
 .about .content h3 span {
-  color: #55aafe;
+  color: #1D7874;
 }
 
 .about .content p {

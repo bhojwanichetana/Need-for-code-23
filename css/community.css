@@ -1,17 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background:#0044ff;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #0044ff;
+}
+
+.heading span {
+  color: #30076a;
+}
+
+
+.btn {
+  display: block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #30076a;
+  cursor: pointer;
+  background: none;
+  color: #30076a
+  ;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #55aafe;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header {
+    background: white;
+    display:-webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem 9%;
+    -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    -webkit-transform: translateX(0rem);
+            transform: translatey(0rem);
+           
+  }
+  .header.active {
+    -webkit-transform: translateX(0rem);
+            transform: translateY(0rem);
+  }
+  .header .logo {
+    font-size: 2.5rem;
+    color: #130f40;
+    font-weight: bolder;
   }
   
-  body {
-    --twitter-color: #50b7f5;
-    --twitter-background: #e6ecf0;
+  .header .logo i {
+    color: #1aa7ac;
+  }
+  
+  .header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: rgb(195, 31, 31);
+  }
+  
+  .header .navbar a:hover {
+    color: #1aa7ac;
+    
+  }
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  }
+  .navbar li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  
+  .header .icons a,
+  .header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #130f40;
+    cursor: pointer;
+  }
+  
+  .header .icons a:hover,
+  .header .icons div:hover {
+    color: #1aa7ac;
+    transform: scale(1.1);
+  }
+  .community-content{
+    display: flex;
+    margin-top: 100px;
   }
   
   .sidebarOption {
-    display: flex;
+    display: block;
     align-items: center;
     cursor: pointer;
   }
@@ -21,7 +194,7 @@
     padding: 10px;
   }
   
-  .sidebarOption h2 {
+  .sidebarOption {
     font-weight: 500;
     font-size: 14px;
     margin-right: 20px;
@@ -53,7 +226,7 @@
     display: flex;
     height: 100vh;
     max-width: 1300px;
-    margin-left: auto;
+    margin-left: 50px;
     margin-right: auto;
     padding: 0 10px;
   }
@@ -62,9 +235,8 @@
     border-right: 1px solid var(--twitter-background);
     flex: 0.2;
   
-    min-width: 250px;
+    min-width: 350px;
     margin-top: 20px;
-    padding-left: 20px;
     padding-right: 20px;
   }
   
@@ -76,6 +248,7 @@
   /* feed */
   .feed {
     flex: 0.5;
+    width: 500px;
     border-right: 1px solid var(--twitter-background);
     min-width: fit-content;
     overflow-y: scroll;
@@ -135,11 +308,11 @@
   }
   
   .tweetBox__tweetButton {
-    background-color: var(--twitter-color);
+    background-color: #1aa7ac;
     border: none;
     color: white;
     font-weight: 900;
-  
+    cursor: pointer;
     border-radius: 30px;
     width: 80px;
     height: 40px;
@@ -165,6 +338,14 @@
     object-fit: contain;
     border-radius: 20px;
   }
+  .fa-paw{
+    font-size: 24px;
+    color: #50b7f5;
+  }
+  .video{
+    object-fit: contain;
+    border-radius: 20px;
+  }
   
   .post__footer {
     display: flex;
@@ -174,7 +355,7 @@
   
   .post__badge {
     font-size: 14px !important;
-    color: var(--twitter-color);
+    color: #1aa7ac;
     margin-right: 5px;
   }
   
@@ -233,9 +414,20 @@
     padding: 20px;
     background-color: #f5f8fa;
     border-radius: 20px;
+    height: 300px;
   }
   
   .widgets__widgetContainer h2 {
     font-size: 18px;
     font-weight: 800;
+  }
+
+  .helpline-numbers{
+    font-size: 16px;
+  }
+
+  .sidebar-hn, .sidebar-fa{
+    padding: 15px;
+    background-color: rgba(224, 223, 223, 0.281);
+    border-radius: 20px;
   }
