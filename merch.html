@@ -4,158 +4,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="merch.css">
+    <title>Merch | Khoj</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <style media="screen">
+        .carousel-cell {
+          width: 100%;
+          }
+      
+          /* cell number */
+          .carousel-cell:before {
+            display: block;
+          }
+        </style>
+
 </head>
 <body>
-    <section class="shop" id="shop">
+    
+<!-- header section starts  -->
 
-        <h1 class="heading"> our <span> products </span> </h1>
-    
-        <div class="box-container">
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_01.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_02.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_03.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_04.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_05.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_06.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>air-dried food</h3>
-                    <div class="amount"> $15.00 - $30.00 </div>
-                </div>
-            </div>
-    
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-paw"></i> Khoj</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">adopt</a>
+        <a href="#plan">donate</a>
+        <a href="#contact">Rescue</a>
+        <a href="#volunteer">volunteer</a>
+        <a href="#shop">community</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <!--<form action="" class="login-form">
+        <h3>sign in</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="password" name="" placeholder="enter your password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
         </div>
-    
-    </section>
-    
-    <!-- shop section ends -->
-    
-    <!-- services section starts  -->
-    
-    <section class="services" id="services">
-    
-        <h1 class="heading"> our <span>services</span> </h1>
-    
-        <div class="box-container">
-    
-            <div class="box">
-                <i class="fas fa-dog"></i>
-                <h3>dog boarding</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-cat"></i>
-                <h3>cat boarding</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-bath"></i>
-                <h3>spa & grooming</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-drumstick-bite"></i>
-                <h3>healthy meal</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-baseball-ball"></i>
-                <h3>activity exercise</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-heartbeat"></i>
-                <h3>health care</h3>
-                <a href="#" class="btn">read more</a>
-            </div>
-    
+        <input type="submit" value="sign in" class="btn">
+        <div class="links">
+            <a href="#">forgot password</a>
+            <a href="#">sign up</a>
         </div>
-    
-    </section>
+    </form> -->
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3> <span>SAVE</span> me from being homeless </h3>
+        <a href="#" class="btn">Help Today</a>
+    </div>
+
+    <img src="image/bottom_wave.png" class="wave" alt="">
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+
+<!-- about section ends -->
+
+<!-- dog and cat food banner section starts -->
+
+
+<!-- services section ends -->
+
+<!-- shop section starts  -->
+
+1
+        <a href="#" class="btn readmore">Read More</a>
+        <br>
+        
+<section class="shop" id="shop">
+
+        <h1 class="heading"> Our <span> merch </span> </h1>
+        
+    <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
+      <div class="carousel-cell">
+        <img class="w3-image" src="merch-images/merch/81wXM3bQ7wL._AC_UL640_QL65_.jpg">
+      </div>
+      <div class="carousel-cell">
+        <img class="w3-image" src="merch-images/merch/Personalized-Dog-Collars-adjustable-Soft-Leather-Custom-Dog-Collar-Engrave-Name-ID-Tags-for-Cat-puppy.jpg">
+      </div>
+      <div class="carousel-cell">
+        <img class="w3-image" src="merch-images/merch/ssrco,slim_fit_t_shirt,womens,charcoal_heather,front,square_product,600x600.jpg">
+      </div>
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  </body>
+        
+        <div class="box-container">
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="merch-images/merch/61scyqKcVnS._AC_UL320_.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="merch-images/merch/images-2.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/merch2.jfif" alt="">
+            </div>
+            <div class="content">
+                <h3>air-dried food</h3>
+                <div class="amount"> $15.00 - $30.00 </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <a href="#" class="btn readmore">See More</a>
+    </div>
+
+
+
+<!-- shop section ends -->
+<!--
+<section class="contact" id="contact">
+
+    <div class="image">
+        <img src="image/contact_img.png" alt="">
+    </div>
+
+    <form action="">
+        <h3>contact us</h3>
+        <input type="text" placeholder="your name" class="box">
+        <input type="email" placeholder="your email" class="box">
+        <input type="tumber" placeholder="your number" class="box">
+        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="send message" class="btn">
+    </form>
+
+</section>-->
+
+<section class="footer">
+
+    <img src="image/top_wave.png" alt="">
+
+    <div class="share">
+        <a href="#" class="btn"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <a href="#" class="btn"> <i class="fab fa-twitter"></i> twitter </a>
+        <a href="#" class="btn"> <i class="fab fa-instagram"></i> instagram </a>
+        
+        
+    </div>
+
+    <div class="credit"> created by <span> team Pied Piper </span> | all rights reserved! </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
