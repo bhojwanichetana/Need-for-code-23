@@ -211,7 +211,7 @@ section {
 }
 
 .home .content h3 span {
-  color: #130f40;
+  color: #55aafe;
 }
 
 .home .content .btn {
@@ -224,7 +224,7 @@ section {
 }
 
 .home .content .btn::before { 
-  background:  #130f40 ;
+  background:  #55aafe ;
 }
 
 .home .wave {
