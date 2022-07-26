@@ -266,7 +266,7 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: url(../image/home_bg_img.jpg) no-repeat;
+  background: url(https://content.jdmagicbox.com/comp/def_content/animal-rescue-services/0pg6ycuozn-animal-rescue-services-2-ys2uz.jpg?clr=3e2833) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -278,12 +278,13 @@ section {
 
 .home .content h3 {
   font-size: 6rem;
-  color: #fff;
+  color: white;
+  text-shadow: 2px 2px 6px #3F4E4F;
   padding-bottom: 1rem;
 }
 
 .home .content h3 span {
-  color: #e67e22;
+  color: #eb965e;
 }
 
 .home .content .btn {
@@ -295,8 +296,8 @@ section {
   color: #130f40;
 }
 
-.home .content .btn::before {
-  background: #fff;
+.home .content .btn::before { 
+  background: #eb965e ;
 }
 
 .home .wave {
@@ -326,7 +327,8 @@ section {
 }
 
 .about .image img {
-  width: 100%;
+  margin-left:50px;
+  width: 60%;
 }
 
 .about .content {
