@@ -11,6 +11,7 @@
   text-transform: capitalize;
   -webkit-transition: .2s linear;
   transition: .2s linear;
+  
 }
 
 html {
@@ -29,7 +30,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #e67e22;
+  background:#1FD6A5;
   border-radius: 5rem;
 }
 
@@ -41,11 +42,11 @@ section {
   padding-bottom: 2rem;
   text-align: center;
   font-size: 3.5rem;
-  color: #130f40;
+  color: #1FD6A5;
 }
 
 .heading span {
-  color: #e67e22;
+  color: #30076a;
 }
 
 .btn {
@@ -54,10 +55,11 @@ section {
   padding: .8rem 2.8rem;
   border-radius: 5rem;
   border-top-left-radius: 0;
-  border: 0.2rem solid #130f40;
+  border: 0.2rem solid #30076a;
   cursor: pointer;
   background: none;
-  color: #130f40;
+  color: #30076a
+  ;
   font-size: 1.7rem;
   overflow: hidden;
   z-index: 0;
@@ -71,7 +73,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #eb965e;
+  background: #1D7874;
   z-index: -1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -109,7 +111,7 @@ section {
 }
 
 .header {
-    background: white;
+    background: #fff;
     display:-webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -137,22 +139,22 @@ section {
   }
   .header .logo {
     font-size: 2.5rem;
-    color: #130f40;
+    color: #16001E;
     font-weight: bolder;
   }
   
   .header .logo i {
-    color: #e67e22;
+    color: #1FD6A5;
   }
   
   .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: rgb(195, 31, 31);
+    color: #1D7874;
   }
   
   .header .navbar a:hover {
-    color: #e67e22;
+    color: #1aa7ac;
     
   }
   .navbar ul{
@@ -169,14 +171,185 @@ section {
   .header .icons div {
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color: #130f40;
+    color: #16001E;
     cursor: pointer;
   }
   
   .header .icons a:hover,
   .header .icons div:hover {
-    color: #e67e22;
+    color: #1aa7ac;
     transform: scale(1.1);
   }
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 5%;
+    text-align: center;
+    font-size: 50;
+}
 
+/* Styling the area of the slides */
+
+#slideshow {
+    overflow: hidden;
+    height: 600px;
+    width: 1380px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+/* Style each of the sides
+with a fixed width and height */
+
+.slide {
+    float: left;
+    height: 600px;
+    width: 1380px;
+}
+
+/* Add animation to the slides */
+
+.slide-wrapper {
+    
+    /* Calculate the total width on the
+basis of number of slides */
+    width: calc(1380px * 3);
+    
+    /* Specify the animation with the
+duration and speed */
+    animation: slide 20s ease infinite;
+    transition: 5s;
+}
+
+/* Set the background color
+of each of the slides */
+
+.slide:nth-child(1) {
+    background-image: url(../images/donation-images/image3.png);
+}
+
+.slide:nth-child(2) {
+    background: pink;
+}
+
+.slide:nth-child(3) {
+    background: red;
+}
+
+
+/* Define the animation
+for the slideshow */
+
+@keyframes slide {
+    
+    /* Calculate the margin-left for
+each of the slides */
+    30% {
+        margin-left: 0px;
+    }
+    35% {
+        margin-left: calc(-1380px * 1);
+       
+    }
+    65%{
+        margin-left: calc(-1380px * 1);
+       
+    }
+
+    70% {
+        margin-left: calc(-1380px * 2);
+    }
+    100%{
+        margin-left: calc(-1380px * 2);
+    }
+    
+}
+
+.box-container {
+    margin-top:10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1.5rem;
+    margin-left:100px;
+  }
   
+  .box-container .box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5%;
+    margin-left:10px;
+
+  }
+  .heading{
+    margin-top:15px;
+    font-size: 60px; 
+  }
+  .heading span{
+    color: #1aa7ac;
+  }
+  
+  .box-container .box:hover .image img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .box-container .box:hover .icons {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  
+  .box-container .box .image {
+    height: 45rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+   .box-container .box .icons {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  
+  .box-container .box .icons a {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    background: #fff;
+    color: #130f40;
+    text-align: center;
+  }
+  
+ .box-container .box .icons a:hover {
+    color: #fff;
+    background: #1aa7ac;
+  }
+  
+  .box-container .box .content {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .box-container .box .content h3 {
+    font-size: 2.2rem;
+    color: #130f40;
+    padding-bottom: .5rem;
+  }
+  
+  .box-container .box .content .amount {
+    font-size: 2rem;
+    color: #1aa7ac;
+  }
