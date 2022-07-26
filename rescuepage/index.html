@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Google Maps JavaScript API</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../css/volunteer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+	<header class="header">
+
+		<a href="#" class="logo"> <i class="fas fa-paw"></i> Khoj</a>
+	
+		<nav class="navbar">
+			<ul>
+			<li><a href="#home">home</a></li>
+			<li><a href="#about">adopt</a></li>
+			<li><a href="#plan">donate</a></li>
+			<li><a href="#contact">Rescue</a></li>
+			<li><a href="#volunteer">volunteer</a></li>
+			<li><a href="#shop">community</a></li>
+		</ul>
+		</nav>
+	
+		<div class="icons">
+			<div class="fas fa-user" id="login-btn"></div>
+		</div>
+	</header>
+<main>
+	<div class="rescue-header"><h1>Rescue A Pet</h1></div>
+	<div id="wrapper">
+		<div id="map-canvas"></div>
+		<div id="rescue-content">
+			<button id="savelocation">Save location</button>
+			<button id="uploadimages" onclick="document.getElementById('getFile').click()">Upload images</button>
+
+			<input id="getFile" type="file" accept="Image/*" style="display:none">
+		</div>
+	</div>
+</main>
+<script src="javascript.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCelqs07FFIo1kpySCmUmFbGc29ottNFZU&libraries=places&callback=initialize"></script>
+</body>
+</html>

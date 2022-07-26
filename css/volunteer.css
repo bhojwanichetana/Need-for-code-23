@@ -153,7 +153,17 @@ section {
   
   .header .navbar a:hover {
     color: #e67e22;
+    
   }
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  }
+  .navbar li:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
   
   .header .icons a,
   .header .icons div {
@@ -166,6 +176,7 @@ section {
   .header .icons a:hover,
   .header .icons div:hover {
     color: #e67e22;
+    transform: scale(1.1);
   }
   
   .home {

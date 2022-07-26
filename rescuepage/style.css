@@ -2,14 +2,26 @@ html, body, #map-canvas {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 #map-canvas {
-	margin-left: 30px;
-	height: 500px;
+	margin-left: 24px;
+	height: 450px;
 	width: 900px;
 }
-
+.rescue-header{
+	color:#130f40;
+	width: 100%;
+	display: flex;
+	margin-top: 100px;
+	justify-content: center;
+	align-items: center;
+}
+.rescue-header h1{
+	font-size: 30px;
+	
+}
 label {
 	padding: 20px 10px;
 	display: inline-block;
@@ -22,10 +34,10 @@ input {
 }
 
 #wrapper{
-	margin-top:100px;
 	display: flex;
 	height: 100%;
 	width: 100%;
+	margin-top: 30px
 }
 
 #rescue-content{
