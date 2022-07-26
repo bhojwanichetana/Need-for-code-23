@@ -3,11 +3,12 @@
     margin: 0;
     font-family: 'josefin sans',sans-serif;
     box-sizing: border-box   ;
+    background-color:#ACB992;
 }
 .about{
     width:100%;
     padding:78px 0px ;
-    background-color: darkseagreen;
+    
 
 }
 .about-text{
@@ -29,7 +30,7 @@
 }
 
 button{
-    background:lightyellow ;
+    background:#8FBDD3 ;
     color: black;
     text-decoration: none;
     border:2px solid transparent;
@@ -41,28 +42,28 @@ button{
 }
 button:hover{
     background:transparent ;
-    border: 2px solid lightyellow;
+    border: 2px solid #8FBDD3;
     cursor:pointer
 }
 about-text h5{
-color: gray;
+color: ;
 font-size: 25px;
 text-transform: capitalize;
 letter-spacing: 2px;
 }
 span{
-    color:gray;
+    color:gra;
 
 
 }
 .about-text p{
-    color: gray;
+    color: #A97155;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
 }
 .about-text h1{
-    color: moccasin;
+    color: #8FBDD3;
     font-size: 80px;
     text-transform: 20px;
     

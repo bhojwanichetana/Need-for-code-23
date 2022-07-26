@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../css/merch.css">
     <link rel="stylesheet" href="../css/style.scss">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-    <style media="screen">
+    
+   <!-- <style --media="screen">
         .carousel-cell {
           width: 65%;
           }
@@ -23,6 +23,50 @@
           .carousel-cell:before {
             display: block;
           }
+        </style> -->
+        <style>
+
+            #slider {
+                overflow: hidden;
+            }
+            #slider figure{
+               position: relative;
+               width: 500%;
+               margin:0;
+               left:0;
+               animation: 25s slider infinite; 
+            }
+            #slider figure img{
+                float: left;
+                width: 20%;
+                height:600px;
+                width:600px
+                
+            }
+            
+               
+            
+            @keyframes slider{
+                0% {
+                    left: 0;
+                }
+                20% {
+                    left:0;
+                }
+                25% {
+                    left:-100%;
+                }45% {
+                    left:-100%;
+                }50% {
+                    left:-200%;
+                }70% {
+                    left:-200%;
+                }75%{
+                    left:-300%;
+                }95%{
+                    left: -300%;
+                }
+            }
         </style>
 
 </head>
@@ -95,14 +139,25 @@
 <!-- shop section starts  -->
 
 1
-        <a href="#" class="btn readmore">Read More</a>
-        <br>
+       >
         
 <section class="shop" id="shop">
 
         <h1 class="heading"> For <span> Them </span> </h1>
+        <div id="slider">
+            <figure >
+                <img src="../images/merch-images/merch/carepackage.jpg">
+                <img src="../images/merch-images/merch/collar.jpg">
+                <img src="../images/merch-images/merch/carepackage2.jpg">
+                <img src="../images/merch-images/merch/brush.jpg">
+                <img src="../images/merch-images/merch/chewtoy.jpg">
+                <img src="../images/merch-images/merch/feeder.jpg">
+                <img src="../images/merch-images/merch/leash.jpg">
+                <img src="../images/merch-images/merch/bed.jpg">
+            </figure>
+        </div>
         
-    <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
+    <!--<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
       <div class="carousel-cell">
         <img class="w3-image" src="../images/merch-images/merch/carepackage.jpg">
       </div>
@@ -123,7 +178,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  </body>
+  </body> -->
   <h1 class="heading"> For <span> you </span> </h1>
         
         <div class="box-container">
