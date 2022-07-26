@@ -109,7 +109,7 @@ section {
 }
 
 .header {
-  background: #fff;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,8 +127,8 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  -webkit-transform: translateX(-10rem);
-          transform: translateY(-10rem);
+  -webkit-transform: translateX(0rem);
+          transform: translateY(0rem);
 }
 
 .header.active {
@@ -146,10 +146,10 @@ section {
   color: #e67e22;
 }
 
-.header .navbar a {
+.header .navbar a{
   margin: 0 1rem;
   font-size: 1.7rem;
-  color: rgb(195, 31, 31);
+  color:#e67e22 ;
 }
 
 .header .navbar a:hover {
