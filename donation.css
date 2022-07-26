@@ -136,3 +136,19 @@ body {
   .container-foot {
     padding: 1, 2;
   }
+  .colored-section {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: center;
+    background: url(https://content.jdmagicbox.com/comp/def_content/animal-rescue-services/0pg6ycuozn-animal-rescue-services-2-ys2uz.jpg?clr=3e2833) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
