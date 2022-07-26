@@ -30,7 +30,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background:#0044ff;
+  background:#1FD6A5;
   border-radius: 5rem;
 }
 
@@ -42,7 +42,7 @@ section {
   padding-bottom: 2rem;
   text-align: center;
   font-size: 3.5rem;
-  color: #0044ff;
+  color: #1FD6A5;
 }
 
 .heading span {

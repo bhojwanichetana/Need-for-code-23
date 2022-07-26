@@ -59,7 +59,7 @@ section {
   border: 0.2rem solid #30076a;
   cursor: pointer;
   background: none;
-  color: #30076a
+  color: #1FD6A5
   ;
   font-size: 1.7rem;
   overflow: hidden;
@@ -89,6 +89,7 @@ section {
 
 .btn:hover {
   color: #ffffff;
+  transform: scale(1.05);
 }
 
 
@@ -142,17 +143,17 @@ section {
   }
   
   .header .logo i {
-    color: #1aa7ac;
+    color: #1FD6A5;
   }
   
   .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: rgb(195, 31, 31);
+    color: #1D7874;
   }
   
   .header .navbar a:hover {
-    color: #1aa7ac;
+    color: #1FD6A5;
     
   }
   .navbar ul{
@@ -175,7 +176,7 @@ section {
   
   .header .icons a:hover,
   .header .icons div:hover {
-    color: #1aa7ac;
+    color: #1FD6A5;
     transform: scale(1.1);
   }
   .community-content{
@@ -308,7 +309,7 @@ section {
   }
   
   .tweetBox__tweetButton {
-    background-color: #1aa7ac;
+    background-color: #1FD6A5;
     border: none;
     color: white;
     font-weight: 900;
@@ -318,6 +319,10 @@ section {
     height: 40px;
     margin-top: 20px;
     margin-left: auto;
+  }
+  .tweetBox__tweetButton:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
   }
   
   /* post */
@@ -355,7 +360,7 @@ section {
   
   .post__badge {
     font-size: 14px !important;
-    color: #1aa7ac;
+    color: #1FD6A5;
     margin-right: 5px;
   }
   

@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #e67e22;
+  background: #1D7874;
   border-radius: 5rem;
 }
 
@@ -71,7 +71,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #eb965e;
+  background: #1aa7ac;
   z-index: -1;
   -webkit-transition: .2s linear;
   transition: .2s linear;
@@ -137,22 +137,22 @@ section {
   }
   .header .logo {
     font-size: 2.5rem;
-    color: #130f40;
+    color: #16001E;
     font-weight: bolder;
   }
   
   .header .logo i {
-    color: #e67e22;
+    color: #1FD6A5;
   }
   
   .header .navbar a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: rgb(195, 31, 31);
+    color: #1D7874;
   }
   
   .header .navbar a:hover {
-    color: #e67e22;
+    color: #1aa7ac;
     
   }
   .navbar ul{
@@ -169,13 +169,13 @@ section {
   .header .icons div {
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color: #130f40;
+    color: #16001E;
     cursor: pointer;
   }
   
   .header .icons a:hover,
   .header .icons div:hover {
-    color: #e67e22;
+    color: #1aa7ac;
     transform: scale(1.1);
   }
   
@@ -207,7 +207,7 @@ section {
   }
   
   .home .content h3 span {
-    color: #eb965e;
+    color: #1aa7ac;
   }
   
   .home .content .btn {
@@ -220,7 +220,7 @@ section {
   }
   
   .home .content .btn::before { 
-    background: #eb965e ;
+    background: #1aa7ac ;
   }
   
   .home .wave {
