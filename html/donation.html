@@ -58,7 +58,7 @@
 
   <div class="container">
     <img src="../images/donation-images/do-donations-to-stray-dogs-actually-help.jpg" alt="Snow">
-    <a class="btn" href="">Donate</a>
+    <a class="btn" href="#forms">Donate</a>
   </div>
   <div class="container">
     <img src="../images/donation-images/85a7ec6f29b6f6aaab72babe184b9bb55f95fa7a_original.jpeg" alt="Snow">
@@ -66,30 +66,101 @@
   </div>
   <div class="container">
     <img src="../images/donation-images/image4.jpg" alt="Snow">
-    <a class="btn" href="">Community service</a>
+    <a class="btn" href="#cs">Community service</a>
   </div>
 
 </section>
+<div id='forms' class="donation-forms">
+<div class="container-forms">
+  <h1>Donate money</h1>
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Payment type</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">UPI</option>
+          <option value="canada">Card</option>
+          <option value="usa">Net Banking</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Amount</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Enter amount" type="text" onkeyup="checkInput(this)"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
 
-  <!-- Details -->
+<div class="container-forms">
+  <h1>Donate in kind</h1>
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Good type</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Toy</option>
+          <option value="canada">Food</option>
+          <option value="usa">Wearables</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Descriptionw of the good" type="text" "></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</div>
 
-  
-
-  <!-- Prevention And Symptoms-->
-
-  
-
-  <!-- Helping -->
-
-  
-  <!-- Donation -->
-
-  
-
-
-  <!-- Footer -->
-
+<div id="cs" class="cs">
+  <h1>Community Services</h1>
+  <p>Can't donate in money or kind? Just give us your time to help better the lives of strays in our community.</p>
+</div>
  
+
+
+<script language="javascript">
+  function checkInput(ob) {
+    var invalidChars = /[^0-9]/gi
+    if(invalidChars.test(ob.value)) {
+              ob.value = ob.value.replace(invalidChars,"");
+        }
+  }
+  </script>
 </body>
 
 </html>

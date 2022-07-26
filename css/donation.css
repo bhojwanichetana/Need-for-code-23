@@ -219,6 +219,90 @@ section {
   }
 
   .home{
+    height: 100vh;
     display: flex;
     margin-top: 150px;
   }
+
+
+  /* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container-forms{
+  margin-left: 40px;
+  width: 50%;
+  margin-top: 100px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 350px;
+  font-size: 16px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+.donation-forms{
+  display: flex;
+  height: 100vh;
+}
+
+.cs{
+  width: 100%;
+  position: absolute;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cs h1{
+  font-size: 50px;
+}
+.cs p{
+  font-size: 20px;
+}
