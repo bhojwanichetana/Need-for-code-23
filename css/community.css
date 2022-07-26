@@ -11,7 +11,7 @@
   }
   
   .sidebarOption {
-    display: flex;
+    display: block;
     align-items: center;
     cursor: pointer;
   }
@@ -162,6 +162,14 @@
   
   .post__body img {
     width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  .fa-paw{
+    font-size: 24px;
+    color: #50b7f5;
+  }
+  .video{
     object-fit: contain;
     border-radius: 20px;
   }
