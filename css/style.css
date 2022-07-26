@@ -127,12 +127,12 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  -webkit-transform: translateY(-10rem);
+  -webkit-transform: translateX(-10rem);
           transform: translateY(-10rem);
 }
 
 .header.active {
-  -webkit-transform: translateY(0rem);
+  -webkit-transform: translateX(0rem);
           transform: translateY(0rem);
 }
 
@@ -149,7 +149,7 @@ section {
 .header .navbar a {
   margin: 0 1rem;
   font-size: 1.7rem;
-  color: #666;
+  color: rgb(195, 31, 31);
 }
 
 .header .navbar a:hover {

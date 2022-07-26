@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #e67e22;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.heading span {
+  color: #e67e22;
+}
+
+.btn {
+  display: block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  cursor: pointer;
+  background: none;
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #eb965e;
+  z-index: -1;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+          clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+.readmore{
+  width: 200px;
+  margin: 0 auto;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+.header {
+    background: white;
+    display:-webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2rem 9%;
+    -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    -webkit-transform: translateX(0rem);
+            transform: translatey(0rem);
+           
+  }
+  .header.active {
+    -webkit-transform: translateX(0rem);
+            transform: translateY(0rem);
+  }
+  .header .logo {
+    font-size: 2.5rem;
+    color: #130f40;
+    font-weight: bolder;
+  }
+  
+  .header .logo i {
+    color: #e67e22;
+  }
+  
+  .header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: rgb(195, 31, 31);
+  }
+  
+  .header .navbar a:hover {
+    color: #e67e22;
+  }
+  
+  .header .icons a,
+  .header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #130f40;
+    cursor: pointer;
+  }
+  
+  .header .icons a:hover,
+  .header .icons div:hover {
+    color: #e67e22;
+  }
+  
+  .home {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: center;
+    background: url(https://content.jdmagicbox.com/comp/def_content/animal-rescue-services/0pg6ycuozn-animal-rescue-services-2-ys2uz.jpg?clr=3e2833) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  .home .content {
+    width: 50rem;
+  }
+  
+  .home .content h3 {
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 6px #3F4E4F;
+    padding-bottom: 1rem;
+  }
+  
+  .home .content h3 span {
+    color: #eb965e;
+  }
+  
+  .home .content .btn {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .home .content .btn:hover {
+    color: #130f40;
+  }
+  
+  .home .content .btn::before { 
+    background: #eb965e ;
+  }
+  
+  .home .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+  }
