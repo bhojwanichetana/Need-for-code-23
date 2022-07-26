@@ -191,10 +191,10 @@ body {
 
 #slideshow {
     overflow: hidden;
-    height: 600px;
-    width: 1380px;
+    height: 450px;
+    width: 1000px;
     margin-top: 60px;
-    margin-left: 40px;
+    margin-left: 230px;
 }
 
 /* Style each of the sides
@@ -224,15 +224,15 @@ duration and speed */
 of each of the slides */
 
 .slide:nth-child(1) {
-    background-image: url(../images/donation-images/image3.png);
+    background-image: url(../image/imagestemp/adoptionslider.jpeg);
 }
 
 .slide:nth-child(2) {
-    background: pink;
+    background-image: url(../image/imagestemp/fosterslider.jpeg);
 }
 
 .slide:nth-child(3) {
-    background: red;
+    background-image: url(../image/imagestemp/sponsorslider.jpeg);
 }
 
 
