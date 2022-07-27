@@ -4,11 +4,11 @@ listofmessages = [];
 document.getElementById("post-btn").addEventListener("click",addNewPost);
 function loadposts(){
     console.log("loading")
-    temparr = JSON.parse(window.localStorage.getItem('test'));
-    console.log(temparr)
-    if(temparr.length>0){
-    for(i=0;i<temparr.length;i++)
-        createnewpost(temparr[i])
+    listofmessages = JSON.parse(window.localStorage.getItem('test'));
+    console.log(listofmessages)
+    if(listofmessages.length>0){
+    for(i=0;i<listofmessages.length;i++)
+        createnewpost(listofmessages[i])
     }
 }
 window.onload = loadposts;
@@ -23,6 +23,7 @@ function storedata(message){
     listofmessages = JSON.parse(window.localStorage.getItem('test'));
     listofmessages.push(message)
     localStorage.setItem('test', JSON.stringify(listofmessages));
+    document.getElementById("tweet").value=''
 }
 function createnewpost(message){
     {
