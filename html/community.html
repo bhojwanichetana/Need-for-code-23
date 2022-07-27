@@ -84,12 +84,15 @@
             />
             <input type="text" placeholder="Share new pet stories..." id="tweet" />
           </div>
-          <button class="tweetBox__tweetButton" type="submit">Post</button>
+          <button class="tweetBox__tweetButton" id="post-btn" type="button" >Post</button>
         </form>
       </div>
       <!-- tweetbox ends -->
 
       <!-- post starts -->
+      <div id="newposts">
+        <ul id="newposts-ul"></ul>
+      </div>
       <div class="post">
         <div class="post__avatar">
           <img
@@ -103,7 +106,7 @@
               <h3>
                 Chetana Bhojwani
                 <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span>@bhojwanichetana</span
+                  >@bhojwanichetana</span
                 >
               </h3>
             </div>

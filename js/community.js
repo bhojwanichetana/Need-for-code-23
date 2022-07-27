@@ -1,97 +1,81 @@
-//Variables
-const formulario = document.querySelector('#form');
-const list_tweets = document.querySelector('#list-tweets');
+const ul = document.getElementById('newposts-ul');
+listofmessages = [];
 
-let tweets = [];
-
-//EventListners
-eventListeners();
-
-function eventListeners(){
-    formulario.addEventListener('submit', agregarTweet);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        tweets = JSON.parse(localStorage.getItem('tweets')) || [];
-        crearHtml();
-
-    })
-}
-
-//Funciones
-function agregarTweet(e){
-    e.preventDefault();
-    const tweet = document.querySelector('#tweet').value;
-    //validadcion
-   if(tweet === '') {
-        mostrarError('No puede ir vacio')
-        return;
-   }
-   //Agregar al array Tweet
-   const tweetObj = {
-       id: Date.now(),
-       tweet
-   }
-   tweets = [...tweets, tweetObj];
-
-    //Crear HTML
-    crearHtml();
-
-    formulario.reset();
-}
-
-function mostrarError(error){
-    const mensaje = document.createElement('p');
-    mensaje.textContent = error;
-    mensaje.classList.add('error');
-    formulario.insertBefore(mensaje, formulario.children[1]);
-
-    setTimeout(() => {
-        mensaje.remove();
-    }, 2000);
-
-}
-
-//Muestra listado de tweets
-function crearHtml(){
-    limpiarHtml();
-
-    if(tweets.length > 0){
-        tweets.forEach(tweet => {
-            const btnEliminar = document.createElement('a');
-            btnEliminar.innerText = 'x';
-            btnEliminar.classList.add('deletebutton');
-
-            btnEliminar.onclick = () => {
-                borrarTweet(tweet.id);
-            }
-
-            const item = document.createElement('p');
-            item.innerText = tweet.tweet;
-            item.appendChild(btnEliminar);
-            
-            item.classList.add('item');
-            list_tweets.appendChild(item);
-        })
-    }
-
-    //Sincronizar Storage
-    sincronizarStorage();
-}
-//Agregar tweets a localStorage
-function sincronizarStorage(){
-    localStorage.setItem('tweets', JSON.stringify(tweets));
-}
-
-function borrarTweet(id) {
-    tweets = tweets.filter(tweet => tweet.id !== id);
-
-    crearHtml();
-}
-
-//Limpiar HTML
-function limpiarHtml(){
-    while(list_tweets.firstChild){
-        list_tweets.removeChild(list_tweets.firstChild);
+document.getElementById("post-btn").addEventListener("click",addNewPost);
+function loadposts(){
+    console.log("loading")
+    temparr = JSON.parse(window.localStorage.getItem('test'));
+    console.log(temparr)
+    if(temparr.length>0){
+    for(i=0;i<temparr.length;i++)
+        createnewpost(temparr[i])
     }
 }
+window.onload = loadposts;
+function addNewPost(){
+    message= document.getElementById("tweet").value;
+    console.log(message);
+    storedata(message);
+    createnewpost(message)
+}
+function storedata(message){
+    localStorage.setItem('test', JSON.stringify(listofmessages));
+    listofmessages = JSON.parse(window.localStorage.getItem('test'));
+    listofmessages.push(message)
+    localStorage.setItem('test', JSON.stringify(listofmessages));
+}
+function createnewpost(message){
+    {
+        var ul = document.getElementById("newposts-ul");
 
+
+    var li = document.createElement("li");
+    var divpost = document.createElement("div");
+    divpost.classList.add("post")
+    var divpost_avatar = document.createElement("div");
+    divpost_avatar.classList.add("post__avatar")
+    src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+    var divpost_img = document.createElement("img");
+    divpost_img.src = src;
+    divpost_avatar.appendChild(divpost_img)
+    divpost.appendChild(divpost_avatar)
+
+    var divpost_body = document.createElement("div");
+    divpost_body.classList.add("post__body")
+
+    var divpost_header = document.createElement("div");
+    divpost_header.classList.add("post__header")
+
+    var divpost_headertext = document.createElement("div");
+    divpost_headertext.classList.add("post__headerText")
+
+    var text_h3 = document.createElement("h3");
+    var text_h3_span1 = document.createElement("span");
+    text_h3_span1.classList.add("post__headerSpecial");
+    var snippet4 = document.createTextNode(" @bhojwanichetana ")
+    text_h3_span1.appendChild(snippet4)
+    text_h3.appendChild(text_h3_span1)
+    var post_headerdes = document.createElement("div");
+    post_headerdes.classList.add("post__headerDescription")
+    
+    var post_headerdes_p = document.createElement("p");
+    var snippet = document.createTextNode(message)
+    var snippet2 = document.createTextNode("Chetana Bhojwani")
+    post_headerdes_p.appendChild(snippet)
+    
+    
+    text_h3.prepend(snippet2)
+
+    post_headerdes.appendChild(post_headerdes_p);
+    divpost_headertext.appendChild(text_h3)
+    
+    divpost_header.appendChild(divpost_headertext)
+    divpost_header.appendChild(post_headerdes)
+    
+    divpost_body.appendChild(divpost_header)
+    divpost.appendChild(divpost_body)
+
+    li.appendChild(divpost);
+    ul.prepend(li);}
+    console.log(message)
+}
