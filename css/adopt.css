@@ -416,3 +416,48 @@ each of the slides */
   .footer .credit span {
     color: #1aa7ac;
   }
+
+
+  p{
+    font-size: 24px;
+    text-align: center;
+  }
+   .box-container1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+   .box-container1 .box1 {
+    background: #eee;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+  }
+  
+   .box-container1 .box1:nth-child(even) {
+    border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
+  }
+  
+   .box-container1 .box1:hover {
+    border-radius: .5rem;
+  }
+  
+   .box-container1 .box1 i {
+    height: 6.5rem;
+    width: 6.5rem;
+    line-height: 6.5rem;
+    font-size: 3rem;
+    color: #fff;
+    background: #1aa7ac;
+    border-radius: 50%;
+    margin-bottom: .5rem;
+  }
+  
+   .box-container1 .box1 h3 {
+    font-size: 2.2rem;
+    color: #130f40;
+    padding: 1rem 0;
+  }

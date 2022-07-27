@@ -190,7 +190,7 @@ section {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: center;
-    background: url(https://content.jdmagicbox.com/comp/def_content/animal-rescue-services/0pg6ycuozn-animal-rescue-services-2-ys2uz.jpg?clr=3e2833) no-repeat;
+    background: url(../images/image/dog-its-owner-home.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -288,7 +288,7 @@ section {
   }
   
   .footer .credit span {
-    color: #e67e22;
+    color: #1aa7ac;
   }
 
   .background{
@@ -305,23 +305,7 @@ section {
     position: absolute;
     border-radius: 50%;
 }
-.shape:first-child{
-    background: linear-gradient(
-        #1845ada7,
-        #23a2f69e
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #e16286,
-        #f9aebe
-    );
-    right: -30px;
-    bottom: -80px;
-}
+
 form{
     height: 520px;
     width: 400px;
@@ -338,7 +322,7 @@ form{
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    color: #e16286;
+    color: #1aa7ac;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -368,12 +352,12 @@ input{
     font-weight: 300;
 }
 ::placeholder{
-    color: #e16286;
+    color: #1aa7ac;
 }
 button{
     margin-top: 50px;
     width: 100%;
-    background-color:  #f9aebe8f;
+    background-color:  #2acbd082;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
