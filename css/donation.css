@@ -146,10 +146,13 @@ section {
     font-size: 2.5rem;
     color: #16001E;
     font-weight: bolder;
+    text-decoration: none;
+    
   }
   
   .header .logo i {
     color: #1FD6A5;
+    
   }
   
   .header .navbar a {
@@ -160,6 +163,7 @@ section {
   
   .header .navbar a:hover {
     color: #1aa7ac;
+    text-decoration: none;
     
   }
   .navbar ul{
