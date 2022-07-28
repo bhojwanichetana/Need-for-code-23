@@ -4,7 +4,7 @@ listofmessages = [];
 document.getElementById("post-btn").addEventListener("click",addNewPost);
 function loadposts(){
     console.log("loading")
-    listofmessages = JSON.parse(window.localStorage.getItem('test'));
+    listofmessages = JSON.parse(localStorage.getItem("test")) || [];
     console.log(listofmessages)
     if(listofmessages.length>0){
     for(i=0;i<listofmessages.length;i++)
@@ -20,7 +20,7 @@ function addNewPost(){
 }
 function storedata(message){
     localStorage.setItem('test', JSON.stringify(listofmessages));
-    listofmessages = JSON.parse(window.localStorage.getItem('test'));
+    listofmessages = JSON.parse(localStorage.getItem("test")) || [];
     listofmessages.push(message)
     localStorage.setItem('test', JSON.stringify(listofmessages));
     document.getElementById("tweet").value=''
