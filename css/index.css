@@ -635,7 +635,10 @@ body{
   height: 10rem;
   width: 100%;
 }
-
+#savelocation, #uploadimages{
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
 .footer .share {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -700,6 +703,10 @@ body{
   .home .content h3 {
     font-size: 4.5rem;
   }
+  #savelocation, #uploadimages{
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
 }
 
 
@@ -745,4 +752,9 @@ body{
     margin: 2rem;
     font-size: 2rem;
   }
+  #savelocation, #uploadimages{
+    margin-bottom: 10px;
+  font-size: 10px;
+  }
 }
+

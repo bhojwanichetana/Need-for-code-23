@@ -386,3 +386,47 @@ button{
 .social i{
   margin-right: 0px;
 }
+
+
+
+#menu-btn {
+  display: none;
+}
+
+@media (max-width:989px){
+  .navbar li, .icons .btn{
+    display: none;
+  }
+  #menu-btn {
+    display: inline-block;
+    font-size: 16px
+  }
+  #menu-btn:active, #menu-btn:hover{
+    color: #1FD6A5;
+  }
+  .navbar ul{
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .navbar li {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  #savelocation, #uploadimages{
+    margin-bottom: 10px;
+  font-size: 10px;
+  }
+}
