@@ -140,6 +140,7 @@ section {
     -webkit-transform: translateX(0rem);
             transform: translateY(0rem);
   }
+  
   .header .logo {
     font-size: 2.5rem;
     color: #16001E;
@@ -188,16 +189,17 @@ section {
 body{
   background-color: #ffffff;
 }
+#menu-btn {
+  display: none;
+}
 .home {
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
+  
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
+  
           justify-content: center;
   background: url(https://content.jdmagicbox.com/comp/def_content/animal-rescue-services/0pg6ycuozn-animal-rescue-services-2-ys2uz.jpg?clr=3e2833) no-repeat;
   background-position: center;
@@ -707,5 +709,40 @@ body{
   }
   .header .login-form {
     width: 90%;
+  }
+}
+
+
+@media (max-width:721px){
+  .navbar li, .icons .btn{
+    display: none;
+  }
+  #menu-btn {
+    display: inline-block;
+    font-size: 16px
+  }
+  #menu-btn:active, #menu-btn:hover{
+    color: #1FD6A5;
+  }
+  .navbar ul{
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .navbar li {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
   }
 }
