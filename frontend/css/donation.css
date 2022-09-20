@@ -205,8 +205,8 @@ section {
   /* Style the button and place it in the middle of the container/image */
   .container .btn {
     position: absolute;
-    top: 65%;
-    left: 50%;
+    top: 145%;
+    left: 45%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #1D7874;
