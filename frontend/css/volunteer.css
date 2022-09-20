@@ -322,7 +322,9 @@ form{
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    color: #1aa7ac;
+    /* color: #1aa7ac; */
+    color: #30076a;
+
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -352,12 +354,12 @@ input{
     font-weight: 300;
 }
 ::placeholder{
-    color: #1aa7ac;
+    color:#1D7874;
 }
 button{
     margin-top: 50px;
     width: 100%;
-    background-color:  #2acbd082;
+    background-color:#1D7874 ;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
