@@ -198,8 +198,8 @@ section {
   
   /* Make the image responsive */
   .container img {
-    width: 100%;
-    height: 300px;
+    width: 90%;
+    height: 400px;
   }
   
   /* Style the button and place it in the middle of the container/image */
