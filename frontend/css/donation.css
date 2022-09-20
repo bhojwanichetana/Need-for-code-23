@@ -310,3 +310,63 @@ input[type=submit] {
 .cs p{
   font-size: 20px;
 }
+.footer {
+  position: relative;
+  background: url(../images/image/footer_background.jpg) no-repeat;
+  background-position: center;
+  background-size: center;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.footer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+}
+#savelocation, #uploadimages{
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.footer .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer .share a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer .share a:hover {
+  color: #130f40;
+}
+
+.footer .share a::before {
+  background: #fff;
+}
+
+.footer .share a i {
+  padding-right: .5rem;
+}
+
+.footer .credit {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  margin-top: 2.5rem;
+}
+
+.footer .credit span {
+  color: #1aa7ac;
+}
