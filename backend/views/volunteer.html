@@ -19,22 +19,22 @@
 
 <header class="header">
 
-    <a href="../index.html" class="logo"> <i class="fas fa-paw"></i> Khoj</a>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="adopt.html">adopt</a></li>
-			<li><a href="../rescuepage/index.html">Rescue</a></li>
-			<li><a href="../reportabusepage/index.html">Report</a></li>
-			<li><a href="volunteer.html">volunteer</a></li>
-			<li><a href="community.html">community</a></li>
-			<li><a href="donation.html">Support us</a></li>  
-        </ul>
-    </nav>
+    <a href="index.html" class="logo"> <i class="fas fa-paw"></i> Khoj</a>
+  
+      <nav class="navbar">
+          <ul>
+              <li><a href="adopt.html">adopt</a></li>
+        <li><a href="rescuepage.html">Rescue</a></li>
+        <li><a href="reportabusepage.html">Report</a></li>
+        <li><a href="volunteer.html">volunteer</a></li>
+        <li><a href="community.html">community</a></li>
+        <li><a href="donation.html">Support us</a></li>  
+          </ul>
+      </nav>
 
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
-        <a href="volunteer.html" class="btn">Join us</a>    
+        <a href="volunteer.html" class="btn" id="joinus">Join us</a>    
     </div>
 </header>
 <main >
@@ -48,7 +48,7 @@
     </section>
     
     <div class="formwrap">
-    <form action="/register" method="POST">
+    <form action="/register" method="POST" id="registerForm">
         <h3>Register Here</h3>
 
         <label for="username">Email</label>
@@ -81,5 +81,23 @@
 </section>
 </footer>
 <script src="../js/script.js"></script>
+<script>
+    const form = document.getElementById('registerForm')
+    form.addEventListener('submit', registerUser)
+
+    
+        
+        const verify = await require('../isAuth')
+        function loggedCheck(){
+            const isLogged = isAuth
+            console.log(isLogged)
+            if(isLogged){
+                document.getElementById('joinus').innerText = 'Logout'
+            }
+        }
+        window.onload = loggedCheck();
+
+    
+</script>
 </body>
 </html>
