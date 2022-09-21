@@ -10,6 +10,8 @@ const isAuth = require('./isAuth');
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const User = require('./model/user')
+const DonationM = require('./model/donationM');
+const { collection } = require('./model/user');
 
 
 const app = express()
@@ -109,6 +111,21 @@ app.post('/logout', (req,res)=>{
 app.post('/isauth',(req,res)=>{
     //res.json("value":req.session.isAuth)
     res.json({"log":req.session.isAuth})
+})
+
+app.post('/donation',async (req,res)=>{
+    var name = req.body.name
+    var email = req.body.email
+    var method = req.body.method
+    var amount = req.body.amount
+    //db.createCollection("donationMoney")
+    donation = DonationM.create({
+        name : name,
+        email : email,
+        paymentmethod: method,
+        amount: amount
+    })
+    console.log("done")
 })
 
 app.get('/',(req,res)=>{res.render('index');})

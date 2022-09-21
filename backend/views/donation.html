@@ -79,7 +79,7 @@
         <label for="fname">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="name" placeholder="Your name..">
       </div>
     </div>
     <div class="row">
@@ -95,7 +95,7 @@
         <label for="country">Payment type</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
+        <select id="country" name="method">
           <option value="australia">UPI</option>
           <option value="canada">Card</option>
           <option value="usa">Net Banking</option>
@@ -107,7 +107,7 @@
         <label for="subject">Amount</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Enter amount" type="text" onkeyup="checkInput(this)"></textarea>
+        <input id="subject" name="amount" placeholder="Enter amount" type="text" onkeyup="checkInput(this)">
       </div>
     </div>
     <div class="row">
