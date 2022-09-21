@@ -1,17 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const router = express.Router();
 var path = require('path')
-let alert = require('alert'); 
 const bcrypt = require('bcryptjs');
-const isLogged = require('./isAuth');
-const isAuth = require('./isAuth');
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const User = require('./model/user')
 const DonationM = require('./model/donationM');
-
 
 
 const app = express()
@@ -122,6 +117,7 @@ app.post('/donation',async (req,res)=>{
     var method = req.body.method
     var amount = req.body.amount
     //db.createCollection("donationMoney")
+    
     donation = DonationM.create({
         name : name,
         email : email,
@@ -129,7 +125,7 @@ app.post('/donation',async (req,res)=>{
         amount: amount
     })
     console.log("done")
-    var message = "name: "+name+", Amount:"+amount
+    
         
     res.json({"status":"ok"})
 })

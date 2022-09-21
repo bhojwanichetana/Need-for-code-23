@@ -79,7 +79,7 @@
         <label for="fname">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="name" placeholder="Your name..">
+        <input type="text" id="donationName" name="name" placeholder="Your name..">
       </div>
     </div>
     <div class="row">
@@ -87,7 +87,7 @@
         <label for="fname">Email</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="email" placeholder="Email ID">
+        <input type="text" id="donationEmail" name="email" placeholder="Email ID">
       </div>
     </div>
     <div class="row">
@@ -95,10 +95,10 @@
         <label for="country">Payment type</label>
       </div>
       <div class="col-75">
-        <select id="country" name="method">
-          <option value="australia">UPI</option>
-          <option value="canada">Card</option>
-          <option value="usa">Net Banking</option>
+        <select name="method" >
+          <option value="UPI">UPI</option>
+          <option value="Card">Card</option>
+          <option value="Net Banking">Net Banking</option>
         </select>
       </div>
     </div>
@@ -107,7 +107,7 @@
         <label for="subject">Amount</label>
       </div>
       <div class="col-75">
-        <input id="subject" name="amount" placeholder="Enter amount" type="text" onkeyup="checkInput(this)">
+        <input id="donationAmount" name="amount" placeholder="Enter amount" type="text" onkeyup="checkInput(this)">
       </div>
     </div>
     <div class="row">
@@ -141,9 +141,9 @@
       </div>
       <div class="col-75">
         <select id="country" name="country">
-          <option value="australia">Toy</option>
-          <option value="canada">Food</option>
-          <option value="usa">Wearables</option>
+          <option value="toy">Toy</option>
+          <option value="food">Food</option>
+          <option value="wearables">Wearables</option>
         </select>
       </div>
     </div>
@@ -156,7 +156,7 @@
       </div>
     </div>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" onclick="sendEmail()">
     </div>
   </form>
 </div>
@@ -178,15 +178,41 @@
   </section>
   </footer>
 
+  
 
 
-<script language="javascript">
+<script language="text/javascript">
   function checkInput(ob) {
     var invalidChars = /[^0-9]/gi
     if(invalidChars.test(ob.value)) {
               ob.value = ob.value.replace(invalidChars,"");
         }
-  }
+    
+  } 
+  
+  /*{const form = document.getElementById('donationForm')
+  form.addEventListener("submit", function (e){
+    e.preventDefault()
+    emailjs.init("user_ZbHVSK_ukybYbNmz0");
+          console.log("Called")
+              var name = document.getElementById('donationName').value
+              var email = document.getElementById('donationEmail').value
+              var amount = document.getElementById('donationAmount').value
+              var message = "name: "+name+", Amount:"+amount
+              console.log(message)
+                  var templateParams = {
+                      name: name,
+                      email: email,
+                      from: 'Pied Piper',
+                      message_html: message
+                    };
+                  emailjs.send('service_62k6zrs','template_ayh3k5j', templateParams,'ZbHVSK_ukybYbNmz0').then(function(response) {
+                      console.log('SUCCESS!', response.status, response.text);
+                   }, function(error) {
+                      console.log('FAILED...', error);
+                   });
+
+        })}*/
 
   
   </script>
