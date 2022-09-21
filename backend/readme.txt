@@ -1,0 +1,1 @@
+npm i mongoose express-unless express bcryptjs mongoose-unique-validator jsonwebtoken 
