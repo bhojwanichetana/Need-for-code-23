@@ -3,15 +3,16 @@ listofmessages = [];
 
 document.getElementById("post-btn").addEventListener("click",addNewPost);
 function loadposts(){
-    console.log("loading")
+    console.log("loading");
     listofmessages = JSON.parse(localStorage.getItem("test")) || [];
-    console.log(listofmessages)
+    //console.log(listofmessages);
     if(listofmessages.length>0){
     for(i=0;i<listofmessages.length;i++)
-        createnewpost(listofmessages[i])
+        createnewpost(listofmessages[i]);
     }
 }
-window.onload = loadposts;
+window.onload = loadposts();
+
 function addNewPost(){
     message= document.getElementById("tweet").value;
     console.log(message);
