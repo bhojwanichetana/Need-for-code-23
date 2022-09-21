@@ -73,7 +73,7 @@
 <div id='forms' class="donation-forms">
 <div class="container-forms">
   <h1>Donate money</h1>
-  <form action="/donation" method="POST">
+  <form action="/donation" method="POST" id="donationForm">
     <div class="row">
       <div class="col-25">
         <label for="fname">Name</label>
@@ -187,6 +187,8 @@
               ob.value = ob.value.replace(invalidChars,"");
         }
   }
+
+  
   </script>
 </body>
 

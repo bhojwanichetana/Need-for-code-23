@@ -11,12 +11,14 @@ const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const User = require('./model/user')
 const DonationM = require('./model/donationM');
-const { collection } = require('./model/user');
+
 
 
 const app = express()
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+
+
 
 const PORT = 9999
 const URI = 'mongodb+srv://root:root@khoj.jyyckk5.mongodb.net/?retryWrites=true&w=majority'
@@ -85,11 +87,12 @@ app.post('/login', async (req,res)=>{
         console.log("in?")
         if (isMatch) {
             console.log("in")
-            req.session.isAuth = false;
+            req.session.isAuth = true;
             
             return res.redirect('index.html')
 
         }
+        
 
         //console.log(username + " "+password)
         
@@ -126,6 +129,9 @@ app.post('/donation',async (req,res)=>{
         amount: amount
     })
     console.log("done")
+    var message = "name: "+name+", Amount:"+amount
+        
+    res.json({"status":"ok"})
 })
 
 app.get('/',(req,res)=>{res.render('index');})
