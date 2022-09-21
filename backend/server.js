@@ -16,7 +16,7 @@ const app = express()
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-const PORT = 3500
+const PORT = 9999
 const URI = 'mongodb+srv://root:root@khoj.jyyckk5.mongodb.net/?retryWrites=true&w=majority'
 
 
@@ -104,6 +104,11 @@ app.post('/logout', (req,res)=>{
         if (err) throw err;
         return res.redirect("login.html");
       });
+})
+
+app.post('/isauth',(req,res)=>{
+    //res.json("value":req.session.isAuth)
+    res.json({"log":req.session.isAuth})
 })
 
 app.get('/',(req,res)=>{res.render('index');})

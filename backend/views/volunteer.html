@@ -85,18 +85,24 @@
     const form = document.getElementById('registerForm')
     form.addEventListener('submit', registerUser)
 
-    
-        
-        const verify = await require('../isAuth')
-        function loggedCheck(){
-            const isLogged = isAuth
-            console.log(isLogged)
-            if(isLogged){
-                document.getElementById('joinus').innerText = 'Logout'
-            }
-        }
-        window.onload = loggedCheck();
+    var sessionValue = sessionStorage.getItem("isAuth")
 
+        //console.log(sessionValue)
+        async function logCheck(){
+
+            const isLogged= await fetch('/isauth', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+            console.log(isLogged)
+        } 
+        window.onload(logCheck())
     
 </script>
 </body>
