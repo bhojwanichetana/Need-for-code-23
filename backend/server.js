@@ -142,6 +142,7 @@ app.get('/adopt.html',(req,res)=>{res.render('adopt')})
 app.get('/aboutus.html',(req,res)=>{res.render('aboutus')})
 app.get('/volunteer.html',(req,res)=>{res.render('volunteer')})
 app.get('/login.html',(req,res)=>{res.render('login')})
+app.get('/profile.html',(req,res)=>{res.render('profile')})
 app.get('/rescuepage.html',(req,res)=>{req.session.isAuth?res.render('rescuepage'):res.render('login')})
 app.get('/reportabusepage.html',(req,res)=>{req.session.isAuth?res.render('reportabusepage'):res.render('login')})
 
