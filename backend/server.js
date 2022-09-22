@@ -15,7 +15,7 @@ app.set('view engine', 'html');
 
 
 
-const PORT = 9999
+const PORT = 5500
 const URI = 'mongodb+srv://root:root@khoj.jyyckk5.mongodb.net/?retryWrites=true&w=majority'
 
 
