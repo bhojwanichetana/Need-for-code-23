@@ -462,3 +462,7 @@ each of the slides */
     color: #130f40;
     padding: 1rem 0;
   }
+
+  .shiftdown{
+    margin-top: 15px !important;
+  }
