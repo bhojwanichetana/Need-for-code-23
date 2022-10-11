@@ -52,6 +52,7 @@ app.post('/register', async (req,res)=>{
         var password =  req.body.password
         var hashPwd = await bcrypt.hash(password,10)
         //console.log(username + " "+password)
+        //console.log(hashPwd)
         
         user = User.create({
             email: username,
@@ -70,7 +71,7 @@ app.post('/register', async (req,res)=>{
 
 app.post('/login', async (req,res)=>{
     var username = req.body.username
-    console.log(username)
+    //console.log(username)
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(username)){
         const user = await User.findOne({ username })
         if (!user) {
@@ -79,6 +80,8 @@ app.post('/login', async (req,res)=>{
         var password =  req.body.password
         //var hashPwd = await bcrypt.hash(password,10)
         const isMatch = await bcrypt.compare(password, user.password);
+        //console.log( await bcrypt.hash(password,10))
+        //console.log(user.password)
         console.log("in?")
         if (isMatch) {
             console.log("in")
@@ -89,7 +92,7 @@ app.post('/login', async (req,res)=>{
         }
         
 
-        //console.log(username + " "+password)
+        //console.log(username + " "+password +" "+isMatch)
         
         
     }
