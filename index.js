@@ -7,7 +7,7 @@ const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const User = require('./model/user')
 const DonationM = require('./model/donationM');
-require('.env').config()
+require('dotenv').config()
 
 
 const app = express()
