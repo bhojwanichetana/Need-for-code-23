@@ -7,6 +7,7 @@ const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const User = require('./model/user')
 const DonationM = require('./model/donationM');
+require('.env').config()
 
 
 const app = express()
@@ -16,7 +17,7 @@ app.set('view engine', 'html');
 
 
 const PORT = process.env.PORT || 5500
-const URI = 'mongodb+srv://root:root@khoj.jyyckk5.mongodb.net/?retryWrites=true&w=majority'
+const URI = process.env.MONGO_URI
 
 
 const store = new MongoDBStore({
